@@ -28,7 +28,7 @@ type levels = 'success' | 'error' | 'warn' | 'info' | 'note' | 'debug'
 export class Alpaca {
   config: AlpacaOptions
   levels: { [key in levels]: number }
-  private logger: Logger
+  private readonly logger: Logger
 
   constructor (options: AlpacaOptions) {
     console.log('')
@@ -48,27 +48,27 @@ export class Alpaca {
       level: 'debug',
       levels: this.levels,
       transports: [new Console()],
-      format: format.printf((info: { level: string; message: string; }) => {
+      format: format.printf((info: { level: string, message: string }) => {
         const DateTime = new Date()
 
         const date = `${DateTime.getDate()}/${DateTime.getMonth() + 1}/${DateTime.getFullYear()}`
         const time = `${DateTime.getHours()}:${DateTime.getMinutes()}:${DateTime.getSeconds()}`
 
-        const components: Array<string> = []
+        const components: string[] = []
 
-        if (this.config?.components?.date) {
-          components.push(this.config.components.colors ? nodeColors.gray(date) : date)
+        if ((this.config?.components?.date) != null) {
+          components.push((this.config.components.colors != null) ? nodeColors.gray(date) : date)
         }
 
-        if (this.config?.components?.time) {
-          components.push(this.config.components.colors ? nodeColors.gray(time) : time)
+        if ((this.config?.components?.time) != null) {
+          components.push((this.config.components.colors != null) ? nodeColors.gray(time) : time)
         }
 
-        if (this.config?.components?.emoji) {
+        if ((this.config?.components?.emoji) != null) {
           components.push(this.levelEmoji(info.level as levels))
         }
 
-        components.push(this.config?.components?.colors ? this.levelColors(info.level as levels) : info.level)
+        components.push(((this.config?.components?.colors) != null) ? this.levelColors(info.level as levels) : info.level)
 
         return `${components.join(' ')} ${info.message}`
       })
@@ -76,10 +76,7 @@ export class Alpaca {
   }
 
   private levelEmoji (level: levels): string {
-    const levels = Object.keys(this.levels)
-    if (!levels.includes(level)) { throw this.log('error', `${level} is not a valid level`) }
-
-    const emojiMap = {
+    const emojiMap: { [key in levels]: string } = {
       success: 'white_check_mark',
       error: 'x',
       warn: 'construction',
@@ -104,7 +101,7 @@ export class Alpaca {
     return colors[level](level)
   }
 
-  log (level: levels, message: string) {
+  log (level: levels, message: string): Alpaca {
     this.logger.log(level, message)
 
     return this
