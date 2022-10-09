@@ -1,5 +1,5 @@
 {
-  "name": "alpaca.js",
+  "name": "alpaca-logger",
   "version": "0.4.0",
   "description": "Logging for Node.js ✍️  with a opinionated theme 🎨  and configurable API  🍭",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/krshkodes/alpaca.js.git"
+    "url": "git+https://github.com/krshkun/alpaca-logger.git"
   },
   "keywords": [
     "logging",
@@ -17,12 +17,12 @@
     "logs",
     "log"
   ],
-  "author": "Krish Gupta <hi@krshkodes.co>",
+  "author": "Krish Gupta <hi@krshkun.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/krshkodes/alpaca.js/issues"
+    "url": "https://github.com/krshkun/alpaca-logger/issues"
   },
-  "homepage": "https://github.com/krshkodes/alpaca.js#readme",
+  "homepage": "https://github.com/krshkun/alpaca-logger#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "deepmerge": "^4.2.2",

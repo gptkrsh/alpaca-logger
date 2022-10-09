@@ -27,4 +27,4 @@ Example how to mark a checkbox:-
 
 ## Code of Conduct
 
-- [ ] I agree to follow this project's [Code of Conduct](https://github.com/krshkodes/alpaca.js/blob/main/CODE_OF_CONDUCT.md)
+- [ ] I agree to follow this project's [Code of Conduct](https://github.com/krshkun/alpaca-logger/blob/main/CODE_OF_CONDUCT.md)
