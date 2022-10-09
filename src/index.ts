@@ -1,5 +1,7 @@
-import { createLogger, format, Logger } from 'winston'
+import { createLogger as createWinstonLogger, format, Logger } from 'winston'
 import { Console } from 'winston/lib/winston/transports'
+
+import { version } from '../package.json'
 
 import deepmerge from 'deepmerge'
 import emoji from 'node-emoji'
@@ -44,7 +46,7 @@ export class Alpaca {
       debug: 3
     }
 
-    this.logger = createLogger({
+    this.logger = createWinstonLogger({
       level: 'debug',
       levels: this.levels,
       transports: [new Console()],
@@ -73,6 +75,8 @@ export class Alpaca {
         return `${components.join(' ')} ${info.message}`
       })
     })
+
+    this.log('debug', `Booting Alpaca.js v${version as string}`)
   }
 
   private levelEmoji (level: levels): string {
@@ -101,9 +105,19 @@ export class Alpaca {
     return colors[level](level)
   }
 
+  createException (message: string): void {
+    this.logger.error(message)
+
+    throw new Error(message)
+  }
+
   log (level: levels, message: string): Alpaca {
     this.logger.log(level, message)
 
     return this
   }
+}
+
+export function createLogger (options: AlpacaOptions): Alpaca {
+  return new Alpaca(options)
 }

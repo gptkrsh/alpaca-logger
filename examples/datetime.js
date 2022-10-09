@@ -6,7 +6,6 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 async function main () {
   const withDate = new Alpaca({ components: { time: false } })
 
-  withDate.log('debug', `VirusDetector v${require('../package.json').version}. CPU Architecture: ${process.arch}`)
   withDate.log('note', 'Found 8000 files to scan for viruses')
   withDate.log('info', 'Starting to scan all files...')
   withDate.log('success', 'Scanned & Recorded 8000 files')
@@ -17,7 +16,6 @@ async function main () {
 
   const withTime = new Alpaca({ components: { date: false } })
 
-  withTime.log('debug', `VirusDetector v${require('../package.json').version}. CPU Architecture: ${process.arch}`)
   withTime.log('note', 'Found 8000 files to scan for viruses')
   withTime.log('info', 'Starting to scan all files...')
   withTime.log('success', 'Scanned & Recorded 8000 files')
@@ -28,7 +26,6 @@ async function main () {
 
   const withBoth = new Alpaca()
 
-  withBoth.log('debug', `VirusDetector v${require('../package.json').version}. CPU Architecture: ${process.arch}`)
   withBoth.log('note', 'Found 8000 files to scan for viruses')
   withBoth.log('info', 'Starting to scan all files...')
   withBoth.log('success', 'Scanned & Recorded 8000 files')
