@@ -6,7 +6,6 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 async function main () {
   const withEmoji = new Alpaca()
 
-  withEmoji.log('debug', `VirusDetector v${require('../package.json').version}. CPU Architecture: ${process.arch}`)
   withEmoji.log('note', 'Found 8000 files to scan for viruses')
   withEmoji.log('info', 'Starting to scan all files...')
   withEmoji.log('success', 'Scanned & Recorded 8000 files')
@@ -17,7 +16,6 @@ async function main () {
 
   const withoutEmoji = new Alpaca({ components: { emoji: false } })
 
-  withoutEmoji.log('debug', `VirusDetector v${require('../package.json').version}. CPU Architecture: ${process.arch}`)
   withoutEmoji.log('note', 'Found 8000 files to scan for viruses')
   withoutEmoji.log('info', 'Starting to scan all files...')
   withoutEmoji.log('success', 'Scanned & Recorded 8000 files')
