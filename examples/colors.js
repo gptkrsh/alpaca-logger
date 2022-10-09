@@ -1,4 +1,4 @@
-const Alpaca = require('../index')
+const { Alpaca } = require('../')
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
