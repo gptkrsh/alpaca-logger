@@ -1,6 +1,6 @@
 {
   "name": "alpaca.js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Logging for Node.js ✍️  with a opinionated theme 🎨  and configurable API  🍭",
   "main": "dist/index.js",
   "type": "commonjs",

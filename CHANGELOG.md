@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/krshkodes/alpaca.js/compare/v0.2.0...v0.3.0) (2022-10-09)
+
+
+### Features
+
+* ts ([#1](https://github.com/krshkodes/alpaca.js/issues/1)) ([9a03cb1](https://github.com/krshkodes/alpaca.js/commit/9a03cb17c9ef16a2fb0b674c972069efe14093cd))
+
+
+
 # [0.2.0](https://github.com/krshkodes/alpaca.js/compare/v0.1.0...v0.2.0) (2022-10-08)
 
 
