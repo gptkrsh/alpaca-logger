@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/krshkun/alpaca-logger/compare/v0.4.0...v0.5.0) (2022-10-09)
+
+
+### Features
+
+* published to npm ([a90d81d](https://github.com/krshkun/alpaca-logger/commit/a90d81dbc26cee46e6d71d2233687e3720cb0884))
+
+
+
 # [0.4.0](https://github.com/krshkun/alpaca-logger/compare/v0.3.0...v0.4.0) (2022-10-09)
 
 
