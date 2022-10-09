@@ -1,0 +1,10 @@
+src/
+.editorconfig
+.eslintrc.js
+.gitignore
+.prettierrc.json
+.github
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+tsconfig.json
