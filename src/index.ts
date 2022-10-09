@@ -76,7 +76,8 @@ export class Alpaca {
       })
     })
 
-    this.log('debug', `Booting Alpaca.js v${version as string}`)
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    this.log('debug', `Booting Alpaca.js v${version}`)
   }
 
   private levelEmoji (level: levels): string {
