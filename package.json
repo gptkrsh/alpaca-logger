@@ -27,7 +27,7 @@
     "colors": "^1.4.0",
     "deepmerge": "^4.2.2",
     "node-emoji": "^1.11.0",
-    "winston": "^3.7.2"
+    "winston": "^3.8.1"
   },
   "devDependencies": {
     "@types/node": "^18.8.3",
